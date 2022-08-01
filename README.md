@@ -1,3 +1,3 @@
 # personal-portfolio-nextjs
 
-Personal website portfolio of Cole McConnell !
+Personal website portfolio of Cole McConnell 🌱

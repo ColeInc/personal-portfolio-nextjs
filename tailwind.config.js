@@ -6,10 +6,6 @@ module.exports = {
             fontSize: {
                 "20xl": "16rem",
             },
-            // lineHeight: {
-            //     "extra-loose": "2.5",
-            //     12: "3rem",
-            // },
         },
     },
     plugins: [],
