@@ -2,9 +2,12 @@
 module.exports = {
     content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
     theme: {
+        fontFamily: {
+            sans: ['"Montserrat"', "sans-serif"],
+        },
         extend: {
             fontSize: {
-                "20xl": "16rem",
+                "20xl": "12.5rem",
             },
         },
     },

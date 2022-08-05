@@ -31,6 +31,10 @@ a {
     }
 } */
 
+.text-stroke-sm {
+    -webkit-text-stroke: 1px #fff;
+}
+
 .text-stroke {
     -webkit-text-stroke: 3px #fff;
 }
