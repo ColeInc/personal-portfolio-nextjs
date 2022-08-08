@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Grid from "./Grid";
+import Grid from "../layout/Grid";
 
 const LandingParagraph = () => {
     return (
@@ -8,7 +8,7 @@ const LandingParagraph = () => {
             <Grid>
                 <>
                     <h1 className="col-start-2 text-5xl text-transparent text-stroke-sm">ABOUT</h1>
-                    <p className="col-start-4 col-span-6 text-3xl font-sans leading-9">
+                    <p className="col-start-4 col-span-6 text-3xl leading-9 font-sans font-light">
                         HI THERE I&rsquo;M COLE, A FRONT END DEVELOPER CURRENTLY LIVING IN AUCKLAND, NEW ZEALAND. WITH
                         NEARLY 3 YEARS OF DEVELOPMENT EXPERIENCE, I LOVE TAKING THE SKILLS, EXPERIENCE AND KNOW-HOW
                         I&rsquo;VE ACQUIRED AND PUTTING THEM TO USE BY CREATING AMAZING DESIGNS AND EXPERIENCES.

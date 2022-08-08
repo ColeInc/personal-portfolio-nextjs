@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --text-stroke-color: #fff;
+}
+
 html,
 body {
     padding: 0;
@@ -10,6 +14,7 @@ body {
         Droid Sans, Helvetica Neue, sans-serif;
     background: #000;
     color: white;
+    /* overflow-x: hidden; */
 }
 
 a {
@@ -32,11 +37,15 @@ a {
 } */
 
 .text-stroke-sm {
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
 }
 
-.text-stroke {
-    -webkit-text-stroke: 3px #fff;
+.text-stroke-md {
+    -webkit-text-stroke: 2px var(--text-stroke-color);
+}
+
+.text-stroke-lg {
+    -webkit-text-stroke: 3px var(--text-stroke-color);
 }
 
 .link-underline {
@@ -51,4 +60,10 @@ a {
 .link-underline:hover {
     background-size: 100% 1px;
     background-position: 0 90%;
+}
+
+@layer utilities {
+    .text-stroke-hovered {
+        --text-stroke-color: #d1d5db;
+    }
 }

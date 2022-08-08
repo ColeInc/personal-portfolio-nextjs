@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 const RotateArcText = () => {
     const spinnerRef = useRef<HTMLDivElement>();
 
-    // as user scrolls assign the correspoinding window.pageYOffset equal to the transform rotate css style on the arched text circle:
+    // as user scrolls assign the corresponding window.pageYOffset equal to the transform rotate css style on the arched text circle:
     useEffect(() => {
         const onScroll = () => {
             window.addEventListener("scroll", function () {
@@ -16,8 +16,7 @@ const RotateArcText = () => {
     }, []);
 
     return (
-        // <div className="bottom-0 right-0 fixed w-60 h-60" ref={spinnerRef}>
-        <div className="bottom-0 right-0 absolute w-60 h-60" ref={spinnerRef}>
+        <div className="bottom-0 right-0 w-60 h-60 absolute" ref={spinnerRef}>
             <svg viewBox="0 0 100 100">
                 <path
                     id="curve"
