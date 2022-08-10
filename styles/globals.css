@@ -62,6 +62,10 @@ a {
     background-position: 0 90%;
 }
 
+.highlight-top-border:hover + div {
+    border-top: 1px solid #d1d5db;
+}
+
 @layer utilities {
     .text-stroke-hovered {
         --text-stroke-color: #d1d5db;
