@@ -71,3 +71,17 @@ a {
         --text-stroke-color: #d1d5db;
     }
 }
+
+/* .custom-img {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+}
+
+.unset-img {
+    max-width: 25%;
+}
+.unset-img > div {
+    position: unset !important;
+} */

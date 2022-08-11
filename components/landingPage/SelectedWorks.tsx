@@ -23,12 +23,16 @@ const projectData: SelectedWorks[] = [
 
 const SelectedWorks = () => {
     return (
-        <div className="py-48">
-            <h1 className="text-transparent text-10xl text-stroke-md leading-[.75] px-32 pb-6">SELECTED WORK</h1>
-            <div className="mx-32 hover:highlight-top-border">
+        <div className="py-48 mx-[8%]">
+            <h1 className="text-transparent text-10xl text-stroke-md leading-[.75] pb-6">SELECTED WORK</h1>
+            <div className="hover:highlight-top-border">
                 {projectData.map((item, index) => {
                     return <SelectedWorksItem key={index} index={index + 1} data={item} />;
                 })}
+            </div>
+            <div className="flex justify-end py-6">
+                <button className="font-sans text-xl mr-6">VIEW ALL PROJECTS</button>
+                <p>----------------------&gt;</p>
             </div>
         </div>
     );
