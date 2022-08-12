@@ -1,9 +1,11 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Layout from "../components/layout/Layout";
+import HeroText from "../components/landingPage/HeroText";
 import RotateArcText from "../components/ui/RotateArcText";
 import LandingParagraph from "../components/landingPage/LandingParagraph";
 import SelectedWorks from "../components/landingPage/SelectedWorks";
+import Footer from "../components/footer/Footer";
 
 export default function Home() {
     return (
@@ -18,17 +20,10 @@ export default function Home() {
 
             <Layout>
                 <>
-                    {/* <main className="h-screen relative">
-                        <h1 className="text-transparent text-20xl text-stroke-lg leading-[.75] px-24">
-                            HI I&rsquo;M COLE MCCONNELL.
-                            <br />A FRONT END DEVELOPER IN AUCKLAND, NEW ZEALAND.
-                        </h1>
-                        <RotateArcText />
-                    </main>
-
-                    <LandingParagraph /> */}
-
+                    <HeroText />
+                    <LandingParagraph />
                     <SelectedWorks />
+                    <Footer />
                 </>
             </Layout>
         </div>

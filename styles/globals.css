@@ -4,6 +4,7 @@
 
 :root {
     --text-stroke-color: #fff;
+    --horizontal-scroll-speed: 50s;
 }
 
 html,
@@ -70,18 +71,21 @@ a {
     .text-stroke-hovered {
         --text-stroke-color: #d1d5db;
     }
+    /* .infinite-scroll-hovered {
+        --horizontal-scroll-speed: 10s;
+    } */
 }
 
-/* .custom-img {
-    object-fit: contain;
-    width: 100% !important;
-    position: relative !important;
-    height: unset !important;
+.infinite-scroll {
+    animation: move var(--horizontal-scroll-speed) infinite linear;
 }
 
-.unset-img {
-    max-width: 25%;
+@keyframes move {
+    to {
+        transform: translateX(-50%);
+    }
 }
-.unset-img > div {
-    position: unset !important;
-} */
+
+.testing {
+    direction: rtl;
+}
