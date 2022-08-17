@@ -16,7 +16,7 @@ const RotateArcText = () => {
     }, []);
 
     return (
-        <div className="bottom-0 right-0 w-60 h-60 absolute" ref={spinnerRef}>
+        <div className="bottom-0 right-0 w-60 h-60 absolute hidden sm:inline-block" ref={spinnerRef}>
             <svg viewBox="0 0 100 100">
                 <path
                     id="curve"

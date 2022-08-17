@@ -2,7 +2,6 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Layout from "../components/layout/Layout";
 import HeroText from "../components/landingPage/HeroText";
-import RotateArcText from "../components/ui/RotateArcText";
 import LandingParagraph from "../components/landingPage/LandingParagraph";
 import SelectedWorks from "../components/landingPage/SelectedWorks";
 import Footer from "../components/footer/Footer";
@@ -20,9 +19,9 @@ export default function Home() {
 
             <Layout>
                 <>
-                    {/* <HeroText /> */}
+                    <HeroText />
                     <LandingParagraph />
-                    {/* <SelectedWorks /> */}
+                    <SelectedWorks />
                     {/* <Footer /> */}
                 </>
             </Layout>

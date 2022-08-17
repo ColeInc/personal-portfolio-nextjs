@@ -9,7 +9,7 @@ const NavBar = () => {
                     COLE MCCONNELL
                 </button>
             </Link>
-            <div className="w-[6.5rem] xl:w-36 flex justify-between items-center text-xs sm:text-base font-sans">
+            <div className="w-[6.5rem] sm:w-36 flex justify-between items-center text-xs sm:text-base font-sans">
                 <Link href="/work">
                     <button className="link link-underline ">WORK</button>
                 </Link>
