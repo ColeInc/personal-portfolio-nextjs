@@ -9,7 +9,7 @@ import Footer from "../components/footer/Footer";
 
 export default function Home() {
     return (
-        <div className="bg-slate-700">
+        <div className="bg-slate-700 overflow-hidden">
             <Head>
                 <title>Cole McConnell</title>
                 <meta name="description" content="Cole McConnell's Personal Web Portfolio 🌱" />
@@ -20,10 +20,10 @@ export default function Home() {
 
             <Layout>
                 <>
-                    <HeroText />
+                    {/* <HeroText /> */}
                     <LandingParagraph />
-                    <SelectedWorks />
-                    <Footer />
+                    {/* <SelectedWorks /> */}
+                    {/* <Footer /> */}
                 </>
             </Layout>
         </div>
