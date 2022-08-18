@@ -13,9 +13,10 @@ body {
     margin: 0;
     font-family: Garamond, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
         Droid Sans, Helvetica Neue, sans-serif;
-    background: #000;
+    background: #233e29;
     color: white;
-    /* overflow-x: hidden; */
+    /* color: #d3d3d3; */
+    overflow-x: hidden;
 }
 
 a {

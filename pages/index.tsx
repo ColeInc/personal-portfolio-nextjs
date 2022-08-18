@@ -22,7 +22,7 @@ export default function Home() {
                     <HeroText />
                     <LandingParagraph />
                     <SelectedWorks />
-                    {/* <Footer /> */}
+                    <Footer />
                 </>
             </Layout>
         </div>

@@ -1,8 +1,8 @@
 import Image from "next/image";
-import React, { ReactElement } from "react";
-import SelectedWorks from "../../models/SelectedWorks";
+import React from "react";
+import Project from "../../models/Project";
 
-const SelectedWorksItem: React.FC<{ data: SelectedWorks; index: number }> = props => {
+const ProjectItem: React.FC<{ data: Project; index: number }> = props => {
     const techStackList = props.data.techStack.split(",").join(" \u2022 ");
 
     const imagePath = `/assets/images/${props.data.imageArray[0]}`;
@@ -21,8 +21,12 @@ const SelectedWorksItem: React.FC<{ data: SelectedWorks; index: number }> = prop
         <div className="flex justify-between pt-4 pb-3 md:py-6 border-t border-white group hover:border-gray-300 hover:text-gray-300 hover:fill-gray-300 highlight-top-border last:border-b last:border-white last:hover:border-b cursor-pointer">
             <div className="flex flex-col justify-between md:pr-6 w-full">
                 <h1 className="text-3xl sm:text-[40px] xl:text-6xl group-hover:!font-gray-300 !leading-[.75] md:pb-6">
-                    {props.data.name.toUpperCase()}
+                    {props.data.mainHeading.toUpperCase()}
                 </h1>
+                <h2 className="text-3xl sm:text-[40px] xl:text-6xl group-hover:!font-gray-300 !leading-[.75] md:pb-6">
+                    {props.data.subHeading.toUpperCase()}
+                </h2>
+                <p className="">{props.data.description}</p>
                 <div className="md:hidden w-full h-[52vw] my-3 relative bg-black">{previewImage}</div>
                 <div className="flex flex-row justify-between md:justify-start items-end">
                     <h2 className="text-[42px] md:text-[90px] xl:text-9xl text-transparent text-stroke-sm !leading-[.70] group-hover:text-stroke-hovered mr-7">
@@ -38,4 +42,4 @@ const SelectedWorksItem: React.FC<{ data: SelectedWorks; index: number }> = prop
     );
 };
 
-export default SelectedWorksItem;
+export default ProjectItem;
