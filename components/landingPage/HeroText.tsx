@@ -8,7 +8,14 @@ const HeroText = () => {
                 HI I&rsquo;M COLE MCCONNELL.
                 <br />A FRONT END DEVELOPER IN AUCKLAND, NEW ZEALAND.
             </h1>
-            <RotateArcText />
+            <RotateArcText
+                text="COLE MCCONNELL - FRONT END DEVELOPER -"
+                textSize="5.1pt"
+                width="240"
+                height="240"
+                rotationSpeed={5}
+                className="hidden sm:inline-block bottom-0 right-0 absolute"
+            />
         </div>
     );
 };
