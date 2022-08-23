@@ -5,7 +5,7 @@ import Grid from "../layout/Grid";
 const LandingParagraph = () => {
     return (
         <div className="flex flex-col justify-center pt-32 sm:pt-5 xl:pt-64">
-            <Grid className="sm:gap-y-0">
+            <Grid className="!inline-block sm:!grid sm:gap-y-0">
                 <>
                     <h1 className="col-start-2 text-4xl sm:text-4xl xl:text-[40px] text-transparent text-stroke-sm pb-1 sm:pb-0">
                         ABOUT

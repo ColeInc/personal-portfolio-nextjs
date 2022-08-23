@@ -10,11 +10,11 @@ const HeroText = () => {
             </h1>
             <RotateArcText
                 text="COLE MCCONNELL - FRONT END DEVELOPER -"
-                textSize="5.1pt"
-                width="240"
-                height="240"
+                textSize="text-[6.8px]"
+                width="w-[130px]"
+                height="h-[130px]"
                 rotationSpeed={5}
-                className="hidden sm:inline-block bottom-0 right-0 absolute"
+                className="hidden sm:inline-block bottom-0 right-6 xl:right-24 absolute"
             />
         </div>
     );

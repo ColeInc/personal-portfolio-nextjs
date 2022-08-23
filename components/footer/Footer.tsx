@@ -8,7 +8,7 @@ const Footer = () => {
         <div>
             <ScrollingText />
 
-            <Grid className="py-36 sm:py-44 xl:py-80 grid">
+            <Grid className="py-36 sm:py-44 xl:py-80">
                 <>
                     <div className="flex justify-between items-center col-span-4 sm:col-span-8 xl:col-start-3">
                         <div className="hidden sm:flex justify-end items-end">

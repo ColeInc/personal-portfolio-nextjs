@@ -24,12 +24,8 @@ const RotateArcText: React.FC<{
     }, [rotationSpeed]);
 
     return (
-        <div
-            className={`${props.width} ${props.height} ${props.className && props.className}`}
-            // style={{ width: `${props.width}px`, height: `${props.height}px` }}
-            ref={spinnerRef}
-        >
-            <svg viewBox="0 0 100 100">
+        <div className={`${props.width} ${props.height} ${props.className && props.className}`} ref={spinnerRef}>
+            <svg viewBox="20 20 60 60">
                 <path
                     id="curve"
                     className="fill-transparent"
@@ -39,11 +35,7 @@ const RotateArcText: React.FC<{
                     a 25,25 0 1,1 -50,0
                     "
                 />
-                <text
-                    width="100"
-                    className={`fill-white ${props.textSize}`}
-                    // style={{ fontSize: props.textSize }}
-                >
+                <text width="100" className={`fill-white ${props.textSize}`}>
                     <textPath xlinkHref="#curve">{props.text}</textPath>
                 </text>
                 <circle cx="50" cy="50" r="1" className="fill-white" />
