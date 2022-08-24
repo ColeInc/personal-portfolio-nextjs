@@ -4,7 +4,7 @@ import RotateArcText from "../ui/RotateArcText";
 
 const AboutParagraph = () => {
     return (
-        <Grid className="!inline-block sm:!grid sm:gap-y-0 mx-6 sm:mx-0 pb-32">
+        <Grid className="!inline-block sm:!grid sm:gap-y-0 mx-6 sm:mx-0 pb-40 md:pb-52 xl:pb-[19rem]">
             <>
                 <div className="sm:col-start-4 xl:col-start-6 col-span-4 xl:col-span-5 text-lg sm:text-xl xl:text-[24px] leading-[1.2] sm:leading-[1.1] sm:text-right xl:text-left font-sans !font-extralight">
                     <p className="indent-16 sm:indent-[25px] xl:indent-20">
@@ -24,8 +24,8 @@ const AboutParagraph = () => {
                 <RotateArcText
                     text="COLE MCCONNELL - FRONT END DEVELOPER -"
                     textSize="text-[6.8px]"
-                    width="w-[120px] xl:w-[160px]"
-                    height="h-[120px] xl:h-[160px]"
+                    width="w-[80px] md:w-[120px] xl:w-[160px]"
+                    height="h-[80px] md:h-[120px] xl:h-[160px]"
                     rotationSpeed={5}
                     className="sm:col-start-2 sm:row-start-1 xl:col-start-3"
                 />

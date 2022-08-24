@@ -5,6 +5,10 @@
 :root {
     --text-stroke-color: #fff;
     --horizontal-scroll-speed: 50s;
+    /* --main-background-color: #233e29; */
+    /* --main-background-color: #2f4734; */
+    --main-background-color: #334155;
+    --secondary-color: #d3d3d3;
 }
 
 html,
@@ -13,10 +17,8 @@ body {
     margin: 0;
     font-family: Garamond, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
         Droid Sans, Helvetica Neue, sans-serif;
-    /* background: #233e29; */
-    background: #2f4734;
-    color: white;
-    /* color: #d3d3d3; */
+    background: var(--main-background-color);
+    color: var(--secondary-color);
     overflow-x: hidden;
 }
 
@@ -28,16 +30,6 @@ a {
 * {
     box-sizing: border-box;
 }
-
-/* @media (prefers-color-scheme: dark) {
-    html {
-        color-scheme: dark;
-    }
-    body {
-        color: white;
-        background: black;
-    }
-} */
 
 @responsive {
     .text-stroke-sm {

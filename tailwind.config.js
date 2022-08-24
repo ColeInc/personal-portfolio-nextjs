@@ -10,6 +10,9 @@ module.exports = {
                 "10xl": "9.5rem",
                 "20xl": "12.5rem",
             },
+            colors: {
+                "main-background-color": "#2f4734",
+            },
         },
     },
     plugins: [],
