@@ -1,7 +1,5 @@
-interface SelectedWorks {
+export default interface SelectedWorks {
     name: string;
     techStack: string;
     imageArray: string[];
 }
-
-export default SelectedWorks;

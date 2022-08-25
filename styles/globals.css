@@ -3,12 +3,14 @@
 @tailwind utilities;
 
 :root {
-    --text-stroke-color: #fff;
+    --text-stroke-color: #d3d3d3;
     --horizontal-scroll-speed: 50s;
     /* --main-background-color: #233e29; */
-    /* --main-background-color: #2f4734; */
-    --main-background-color: #334155;
+    --main-background-color: #2f4734;
     --secondary-color: #d3d3d3;
+    --secondary-hover-color: #b2b2b3;
+    --cat-hover-color: #f3f4f61a;
+    --footer-copyright-color: #9ca3af;
 }
 
 html,
@@ -46,7 +48,8 @@ a {
 }
 
 .link-underline {
-    background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+    background-image: linear-gradient(transparent, transparent),
+        linear-gradient(var(--secondary-color), var(--secondary-color));
     transition: background-size 0.1s ease-in-out;
     background-repeat: no-repeat;
     background-position: 0 90%;
@@ -60,12 +63,12 @@ a {
 }
 
 .highlight-top-border:hover + div {
-    border-top: 1px solid #d1d5db;
+    border-top: 1px solid var(--secondary-hover-color);
 }
 
 @layer utilities {
     .text-stroke-hovered {
-        --text-stroke-color: #d1d5db;
+        --text-stroke-color: var(--secondary-hover-color);
     }
     /* .infinite-scroll-hovered {
         --horizontal-scroll-speed: 10s;

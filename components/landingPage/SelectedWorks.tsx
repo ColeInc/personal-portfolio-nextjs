@@ -40,8 +40,8 @@ const SelectedWorks = () => {
                 </div>
                 <div className="flex justify-end">
                     <Link href="/work">
-                        <div className="flex items-center group py-3 sm:py-4 xl:py-6 hover:text-gray-300">
-                            <button className="font-sans text-base sm:text-xl xl:text-xl mr-3 sm:mr-4 xl:mr-6">
+                        <div className="flex items-center group pt-3 sm:pt-4 xl:pt-6 group hover:text-secondary-hover-color">
+                            <button className="font-sans text-base text-secondary-color sm:text-xl xl:text-xl mr-3 sm:mr-4 xl:mr-6 group-hover:text-secondary-hover-color">
                                 VIEW ALL PROJECTS
                             </button>
                             <svg

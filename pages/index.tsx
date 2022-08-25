@@ -1,5 +1,4 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import Layout from "../components/layout/Layout";
 import HeroText from "../components/landingPage/HeroText";
 import LandingParagraph from "../components/landingPage/LandingParagraph";

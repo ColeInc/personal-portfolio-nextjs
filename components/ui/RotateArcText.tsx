@@ -35,10 +35,10 @@ const RotateArcText: React.FC<{
                     a 25,25 0 1,1 -50,0
                     "
                 />
-                <text width="100" className={`fill-white ${props.textSize}`}>
+                <text width="100" className={`fill-secondary-color select-none ${props.textSize}`}>
                     <textPath xlinkHref="#curve">{props.text}</textPath>
                 </text>
-                <circle cx="50" cy="50" r="1" className="fill-white" />
+                <circle cx="50" cy="50" r="1" className="fill-secondary-color" />
             </svg>
         </div>
     );

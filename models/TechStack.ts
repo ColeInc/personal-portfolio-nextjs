@@ -1,6 +1,4 @@
-interface TechStack {
+export default interface TechStack {
     name: string;
     techList: string[];
 }
-
-export default TechStack;

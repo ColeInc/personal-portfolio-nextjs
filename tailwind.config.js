@@ -11,7 +11,11 @@ module.exports = {
                 "20xl": "12.5rem",
             },
             colors: {
-                "main-background-color": "#2f4734",
+                "main-background-color": "var(--main-background-color)",
+                "secondary-color": "var(--secondary-color)",
+                "secondary-hover-color": "var(--secondary-hover-color)",
+                "cat-hover-color": "var(--cat-hover-color)",
+                "footer-copyright-color": "var(--footer-copyright-color)",
             },
         },
     },

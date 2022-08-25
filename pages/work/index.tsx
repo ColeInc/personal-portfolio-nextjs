@@ -68,21 +68,23 @@ const Projects = () => {
                     </div>
 
                     <div className="flex justify-center">
-                        <div className="px-6 md:px-16 xl:px-[8%] hover:highlight-top-border xl:max-w-[130rem]">
-                            {projectData.map((item, index) => {
-                                return <ProjectItem key={index} index={index + 1} data={item} />;
-                            })}
-                        </div>
-                    </div>
+                        <div className="px-6 md:px-16 xl:px-[8%] xl:max-w-[130rem]">
+                            <div className="hover:highlight-top-border">
+                                {projectData.map((item, index) => {
+                                    return <ProjectItem key={index} index={index + 1} data={item} />;
+                                })}
+                            </div>
 
-                    <div className="px-6 md:px-16 xl:px-[8%] w-full flex justify-end pt-6 md:pt-12 xl:pt-18 pb-40 md:pb-60">
-                        <RotateArcText
-                            text="COLE MCCONNELL - FRONT END DEVELOPER -"
-                            textSize="text-[6.8px]"
-                            width="w-[120px] xl:w-[160px]"
-                            height="h-[120px] xl:h-[160px]"
-                            rotationSpeed={5}
-                        />
+                            <div className="flex justify-end w-full pt-6 md:pt-12 xl:pt-18 pb-40 md:pb-60">
+                                <RotateArcText
+                                    text="COLE MCCONNELL - FRONT END DEVELOPER -"
+                                    textSize="text-[6.8px]"
+                                    width="w-[120px] xl:w-[160px]"
+                                    height="h-[120px] xl:h-[160px]"
+                                    rotationSpeed={5}
+                                />
+                            </div>
+                        </div>
                     </div>
 
                     <Footer />
