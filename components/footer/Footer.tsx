@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Grid from "../layout/Grid";
+import CatSvg from "../ui/CatSvg";
 import ScrollingText from "./ScrollingText";
 
 const Footer = () => {
@@ -10,13 +11,8 @@ const Footer = () => {
             <Grid className="py-36 sm:py-44 xl:py-72">
                 <>
                     <div className="flex justify-between items-center col-span-4 sm:col-span-8 xl:col-start-3">
-                        <div className="hidden sm:flex justify-end items-end">
-                            <Image
-                                src="/assets/icons/noun-cat-2316865.svg"
-                                alt="Stencil of cat"
-                                height={150}
-                                width={150}
-                            />
+                        <div className="w-[150px] h-[150px] hidden sm:flex justify-end items-end">
+                            <CatSvg />
                         </div>
                         <div className="flex flex-col sm:w-[39rem] xl:w-[42rem] text-right">
                             <p className="font-sans text-sm sm:text-[22px] xl:text-2xl font-light !leading-[1] xl:pb-2">

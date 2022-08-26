@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Grid from "../layout/Grid";
+import CatSvg from "../ui/CatSvg";
 
 const LandingParagraph = () => {
     return (
@@ -16,12 +17,7 @@ const LandingParagraph = () => {
                     </p>
                     <div className="col-start-4 sm:col-start-7 xl:col-start-10 xl:col-span-2 flex justify-end items-end">
                         <div className="w-20 h-20 sm:w-36 sm:h-36 relative">
-                            <Image
-                                src="/assets/icons/noun-cat-2316865.svg"
-                                alt="Stencil of cat"
-                                layout="fill"
-                                objectFit="contain"
-                            />
+                            <CatSvg />
                         </div>
                     </div>
                 </>

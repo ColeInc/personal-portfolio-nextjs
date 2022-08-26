@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Theme from "../../models/Theme";
 import { themeColors } from "../../styles/themeColors";
+import CatSvg from "../ui/CatSvg";
 
 const NavBar = () => {
     const [currentTheme, setCurrentTheme] = useState(1);
@@ -26,7 +27,13 @@ const NavBar = () => {
             "--secondary-hover-color",
             themeColors[currentTheme].secondaryHoverColor
         );
+        document.documentElement.style.setProperty("--cat-hover-color", themeColors[currentTheme].catHoverColor);
+        document.documentElement.style.setProperty(
+            "--footer-copyright-color",
+            themeColors[currentTheme].footerCopyrightColor
+        );
     };
+
     return (
         <div className="w-full flex justify-between items-center px-6 pt-6 sm:px-12 sm:pt-6 bg-transparent sticky top-0 z-50">
             <Link href="/">
@@ -34,19 +41,13 @@ const NavBar = () => {
                     COLE MCCONNELL
                 </button>
             </Link>
-            <div className="flex justify-between gap-3 items-center text-xs sm:text-base font-sans">
+            <div className="flex justify-between gap-3 items-center text-xs sm:text-base font-sans select-none">
                 <div
-                    className="w-[62px] h-[62px] pl-3 flex justify-center items-center hover:bg-cat-hover-color rounded-full cursor-pointer transition ease-in-out"
+                    className="w-[62px] h-[62px] hidden sm:flex justify-center items-center hover:bg-cat-hover-color rounded-full cursor-pointer transition ease-in-out"
                     onClick={catHandler}
                 >
-                    <div className="w-[50px] h-[50px] relative mr-3 -scale-x-100">
-                        <Image
-                            src="/assets/icons/noun-cat-2316865.svg"
-                            alt="Stencil of cat"
-                            layout="fill"
-                            objectFit="contain"
-                            className="hover:opacity-8"
-                        />
+                    <div className="w-[42px] h-[42px] -scale-x-100 hover:text-secondary-color hover:fill-secondary-color">
+                        <CatSvg />
                     </div>
                 </div>
 

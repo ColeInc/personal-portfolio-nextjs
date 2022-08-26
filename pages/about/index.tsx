@@ -15,7 +15,7 @@ const About = () => {
             </Head>
             <Layout>
                 <>
-                    <div className="flex flex-col text-transparent text-[56px] sm:text-[164px] xl:text-[268px] text-stroke-sm leading-[.80] sm:leading-[.73] xl:leading-[.75] mx-8 md:mx-16 pt-14 md:pt-6 xl:pt-20 pb-28 sm:pb-52 xl:pb-80">
+                    <div className="flex flex-col text-transparent text-[56px] sm:text-[164px] xl:text-[268px] text-stroke-sm leading-[.80] sm:leading-[.73] xl:leading-[.75] mx-8 md:mx-16 pt-28 md:pt-16 xl:pt-20 pb-28 sm:pb-52 xl:pb-80">
                         <h1 className="">COLE</h1>
                         <h1 className="self-end">MCCONNELL</h1>
                     </div>
