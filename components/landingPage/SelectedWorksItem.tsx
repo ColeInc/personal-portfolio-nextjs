@@ -18,7 +18,7 @@ const SelectedWorksItem: React.FC<{ data: SelectedWorks; index: number }> = prop
     );
 
     return (
-        <div className="flex justify-between pt-4 pb-3 md:py-6 border-t border-secondary-color group hover:border-secondary-hover-color hover:text-secondary-hover-color hover:fill-secondary-hover-color highlight-top-border last:border-b last:border-secondary-color last:hover:border-b cursor-pointer">
+        <div className="flex justify-between pt-4 pb-3 md:py-6 border-t border-secondary-color group hover:border-secondary-hover-color hover:text-secondary-hover-color hover:fill-secondary-hover-color highlight-top-border last:border-b last:border-secondary-color last:hover:border-b">
             <div className="flex flex-col justify-between md:pr-6 w-full">
                 <h1 className="text-3xl sm:text-[40px] xl:text-6xl group-hover:!font-gray-300 !leading-[.75] md:pb-6">
                     {props.data.name.toUpperCase()}

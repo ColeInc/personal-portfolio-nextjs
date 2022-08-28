@@ -4,6 +4,7 @@ import Socials from "../../components/about/Socials";
 import TechStack from "../../components/about/TechStack";
 import Footer from "../../components/footer/Footer";
 import Layout from "../../components/layout/Layout";
+import NavBar from "../../components/navBar/NavBar";
 
 const About = () => {
     return (

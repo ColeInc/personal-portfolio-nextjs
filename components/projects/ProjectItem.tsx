@@ -18,7 +18,7 @@ const ProjectItem: React.FC<{ data: Project; index: number }> = props => {
     );
 
     return (
-        <div className="flex justify-between pt-4 pb-3 md:py-8 xl:py-14 border-t border-secondary-color group hover:border-secondary-hover-color hover:text-secondary-hover-color hover:fill-secondary-hover-color highlight-top-border last:border-b last:border-secondary-color last:hover:border-b cursor-pointer">
+        <div className="flex justify-between pt-4 pb-3 md:py-8 xl:py-14 border-t border-secondary-color group hover:border-secondary-hover-color hover:text-secondary-hover-color hover:fill-secondary-hover-color highlight-top-border last:border-b last:border-secondary-color last:hover:border-b">
             <div className="flex flex-col justify-start w-full md:pr-6">
                 <div className="flex flex-row justify-between md:justify-start items-end">
                     <div className="flex-col">

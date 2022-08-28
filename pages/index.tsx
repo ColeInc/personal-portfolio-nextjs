@@ -7,7 +7,7 @@ import Footer from "../components/footer/Footer";
 
 export default function Home() {
     return (
-        <div className="overflow-hidden">
+        <div>
             <Head>
                 <title>Cole McConnell</title>
                 <meta name="description" content="Cole McConnell's Personal Web Portfolio 🌱" />

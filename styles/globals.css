@@ -21,8 +21,8 @@ body {
         Droid Sans, Helvetica Neue, sans-serif;
     background: var(--main-background-color);
     color: var(--secondary-color);
-    overflow-x: hidden;
-    -ms-overflow-style: none; /* IE and Edge */
+    /* overflow-x: hidden;
+    -ms-overflow-style: none; IE and Edge */
     scrollbar-width: none; /* Firefox */
 }
 

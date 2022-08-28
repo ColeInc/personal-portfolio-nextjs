@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 
 const RotateArcText: React.FC<{
     text: string;
@@ -14,8 +14,9 @@ const RotateArcText: React.FC<{
     // as user scrolls, assign the corresponding window.pageYOffset equal to the transform rotate css style on the arched text circle:
     useEffect(() => {
         const onScroll = () => {
-            window.addEventListener("scroll", function () {
-                spinnerRef.current.style.transform = "rotate(-" + window.pageYOffset / rotationSpeed + "deg)";
+            requestAnimationFrame(() => {
+                const rotation = window.pageYOffset / rotationSpeed;
+                spinnerRef.current.style.transform = `rotate(${rotation}deg)`;
             });
         };
         window.removeEventListener("scroll", onScroll);

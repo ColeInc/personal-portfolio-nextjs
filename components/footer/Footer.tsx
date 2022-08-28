@@ -31,16 +31,28 @@ const Footer = () => {
 
             <div className="flex justify-between items-end w-full bottom-0 px-6 pb-6 sm:px-12 sm:pb-12">
                 <div className="flex flex-col sm:flex-row justify-between sm:w-[35vw] xl:w-[24vw] font-sans text-base sm:text-[21px] font-extralight underline underline-offset-2 sm:underline-offset-4 decoration-[.5px] sm:decoration-1">
-                    <a className="pb-[3px] sm:pb-0 hover:text-secondary-hover-color" href="https://github.com/ColeInc">
+                    <a
+                        className="pb-[3px] sm:pb-0 hover:text-secondary-hover-color"
+                        href="https://github.com/ColeInc"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         GITHUB
                     </a>
                     <a
                         className="pb-[3px] sm:pb-0 hover:text-secondary-hover-color"
                         href="https://linkedin.com/in/cole-mcconnell"
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
                         LINKEDIN
                     </a>
-                    <a className=" hover:text-secondary-hover-color" href="https://twitter.com/developer_cole">
+                    <a
+                        className=" hover:text-secondary-hover-color"
+                        href="https://twitter.com/developer_cole"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         TWITTER
                     </a>
                 </div>

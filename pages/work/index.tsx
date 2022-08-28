@@ -30,7 +30,7 @@ const projectData: Project[] = [
     },
     {
         mainHeading: "Mosa",
-        subHeading: "Twitter Management Dashboard",
+        subHeading: "LIFE PLANNER",
         description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.
@@ -62,7 +62,7 @@ const Projects = () => {
             </Head>
             <Layout>
                 <>
-                    <div className="flex flex-col text-transparent text-[72px] sm:text-20xl xl:text-[268px] text-stroke-sm xl:text-stroke-md !leading-[.75] mx-8 md:mx-16 pt-16 md:pt-20 xl:pt-8 pb-28 md:pb-28 xl:pb-28">
+                    <div className="flex flex-col text-transparent text-[72px] sm:text-20xl xl:text-[268px] text-stroke-sm xl:text-stroke-md !leading-[.75] mx-8 md:mx-16 pt-16 md:pt-20 xl:pt-20 pb-28 md:pb-28 xl:pb-28">
                         <h1 className="">PREVIOUS</h1>
                         <h1 className="self-end">WORKS</h1>
                     </div>
