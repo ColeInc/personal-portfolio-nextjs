@@ -29,7 +29,7 @@ const projectData: SelectedWorks[] = [
 const SelectedWorks = () => {
     return (
         <div className="flex justify-center">
-            <div className="py-36 sm:py-64 xl:py-80 mx-6 sm:mx-[6%] xl:mx-[8%] xl:max-w-[130rem]">
+            <div className="py-36 sm:py-64 xl:py-[37vh] mx-6 sm:mx-[6%] xl:mx-[8%] xl:max-w-[130rem]">
                 <h1 className="text-transparent text-[48px] sm:text-8xl xl:text-10xl text-stroke-sm xl:text-stroke-md !leading-[.75] pb-4 sm:pb-5 xl:pb-6">
                     SELECTED WORK
                 </h1>
