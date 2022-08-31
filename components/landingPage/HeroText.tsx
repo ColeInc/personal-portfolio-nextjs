@@ -4,7 +4,7 @@ import RotateArcText from "../ui/RotateArcText";
 const HeroText = () => {
     return (
         <div className="overflow-hidden">
-            <h1 className="text-transparent text-[58px] sm:text-[11vw] xl:!text-[10.5vw] text-stroke-sm xl:text-stroke-md !leading-[.75] px-6 sm:px-14 xl:px-24 pt-14 sm:pt-6 xl:pt-5">
+            <h1 className="text-transparent text-[12vw] sm:text-[11vw] xl:!text-[10.5vw] text-stroke-sm xl:text-stroke-md !leading-[.75] px-6 sm:px-14 xl:px-24 pt-14 sm:pt-6 xl:pt-5">
                 HI I&rsquo;M COLE MCCONNELL.
                 <br />A FRONT END DEVELOPER IN AUCKLAND, NEW ZEALAND.
             </h1>

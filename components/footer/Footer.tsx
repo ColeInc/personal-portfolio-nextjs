@@ -19,7 +19,7 @@ const Footer = () => {
                                 IF YOU&rsquo;D LIKE TO CONTACT ME FOR ANY QUESTIONS OR QUERIES, FLICK ME AN EMAIL AT
                             </p>
                             <a
-                                className="font-serif text-[37px] sm:text-6xl xl:text-7xl hover:text-secondary-hover-color !leading-[1.1] underline underline-offset-8 decoration-2 cursor-pointer"
+                                className="font-serif text-[8vw] sm:text-6xl xl:text-7xl hover:text-secondary-hover-color !leading-[1.1] underline underline-offset-8 decoration-2 cursor-pointer"
                                 href="mailto:hello@colemcconnell.co"
                             >
                                 hello@colemcconnell.co

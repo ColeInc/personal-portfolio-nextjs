@@ -4,8 +4,7 @@
 
 :root {
     --text-stroke-color: #d3d3d3;
-    /* --horizontal-scroll-speed: 50s; */
-    --horizontal-scroll-speed: 5s;
+    --horizontal-scroll-speed: 50s;
     /* --main-background-color: #233e29; */
     --main-background-color: #2f4734;
     --secondary-color: #d3d3d3;
@@ -94,6 +93,6 @@ a {
 
 @keyframes move {
     to {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
 }
