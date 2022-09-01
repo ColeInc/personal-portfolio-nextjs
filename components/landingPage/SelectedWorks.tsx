@@ -12,17 +12,12 @@ const projectData: SelectedWorks[] = [
     {
         name: "Beludia Chrome Extension",
         techStack: "CSS, HTML, JAVASCRIPT, CHROME API",
-        imageArray: ["dashboard_screenshot_1.png", "dashboard_screenshot_2.png", "dashboard_screenshot_1.png"],
+        imageArray: ["save_all_tabs_1280x690.png"],
     },
     {
-        name: "Mosa - Twitter Management Dashboard",
-        techStack: "REACT.JS, REDUX, TYPESCRIPT, SCSS, NODE.JS, EXPRESS.JS",
-        imageArray: ["dashboard_screenshot_1.png", "dashboard_screenshot_2.png", "dashboard_screenshot_1.png"],
-    },
-    {
-        name: "Beludia Chrome Extension",
-        techStack: "CSS, HTML, JAVASCRIPT, CHROME API",
-        imageArray: ["dashboard_screenshot_1.png", "dashboard_screenshot_2.png", "dashboard_screenshot_1.png"],
+        name: "LIFE PLANNER - React Native / Express.js Full Stack App",
+        techStack: "REACT NATIVE, REDUX, TYPESCRIPT, NODE.JS, EXPRESS.JS, OAUTH, FIREBASE",
+        imageArray: ["lifeplanner_preview.png"],
     },
 ];
 

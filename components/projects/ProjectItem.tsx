@@ -22,7 +22,7 @@ const ProjectItem: React.FC<{ data: Project; index: number }> = props => {
             <div className="flex flex-col justify-start w-full md:pr-6">
                 <div className="flex flex-row justify-between md:justify-start items-end">
                     <div className="flex-col">
-                        <h1 className="text-[36pt] sm:text-[56px] xl:text-[78px] group-hover:!font-gray-300 !leading-[.9]">
+                        <h1 className="text-[36pt] sm:text-[56px] xl:text-[78px] group-hover:!font-gray-300 !leading-[.9] xl:!leading-[.95]">
                             {props.data.mainHeading.toUpperCase()}
                         </h1>
                         <h2 className="text-sm sm:text-[15px] xl:text-[22px] group-hover:!font-gray-300 font-sans !leading-[.75] md:pb-5">
@@ -41,13 +41,13 @@ const ProjectItem: React.FC<{ data: Project; index: number }> = props => {
                 </p>
 
                 <div className="flex items-end md:mt-auto">
-                    <h3 className="text-[70px] md:text-[52px] hidden md:flex text-transparent text-stroke-sm !leading-[.70] group-hover:text-stroke-hovered self-start md:pr-5">
+                    <h3 className="text-[70px] md:text-[52px] hidden md:flex text-transparent text-stroke-sm !leading-[.70] group-hover:text-stroke-hovered self-start md:pr-5 xl:pr-7">
                         {props.index.toString().padStart(2, "0")}
                     </h3>
-                    <p className="text-[8pt] md:text-[9px] xl:text-base !leading-[1]">{techStackList}</p>
+                    <p className="text-[8pt] md:text-[9px] xl:text-base !leading-[1] font-sans">{techStackList}</p>
                 </div>
             </div>
-            <div className="hidden md:flex w-[42vw] h-[24vw] xl:w-[37vw] xl:h-[22vw] xl:max-w-[55rem] xl:max-h-[32rem] shrink-0 bg-black relative">
+            <div className="hidden md:flex w-[42vw] h-[24vw] xl:w-[37vw] xl:h-[21.2vw] xl:max-w-[55rem] xl:max-h-[32rem] shrink-0 bg-black relative">
                 {previewImage}
             </div>
         </div>
