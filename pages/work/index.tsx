@@ -9,8 +9,14 @@ const projectData: Project[] = [
     {
         mainHeading: "Mosa",
         subHeading: "Twitter Management Dashboard",
-        description: `A twitter management dashboard which aims to basically help twitter users automate certain tasks like scheduling future tweets, as well as view analytics of their account’s performance on a dashboard view. I’m building it using React.js, SCSS, Typescript and Redux for the frontend, and building the backend using Express.js working hand in hand with a Firebase firestore database.`,
-        techStack: "REACT.JS, REDUX, TYPESCRIPT, SCSS, NODE.JS, EXPRESS.JS",
+        description: `A Twitter Management Dashboard which aims to help twitter users automate certain tasks such as scheduling future tweets, as well as view analytics of their account’s performance in a dashboard view. 
+        
+        The front end for this project is built using React.js, SCSS, Typescript and Redux. I designed the UI concepts in Figma. 
+        
+        I’m also building the backend using Node.js (Express.js) with Typescript, which is talking to a Firebase firestore database. It uses OAuth 2.0 to interact with Twitter's APIs, Zod schema validation, and Jest/Supertest for unit testing.
+        `,
+
+        techStack: "REACT.JS, REDUX, TYPESCRIPT, SCSS, NODE.JS, EXPRESS.JS, TWITTER API",
         imageArray: ["dashboard_screenshot_1.png", "dashboard_screenshot_2.png", "dashboard_screenshot_1.png"],
     },
     {
@@ -18,11 +24,11 @@ const projectData: Project[] = [
         subHeading: "Chrome Extension",
         description: `A small, but very handy chrome extension I built which allows users to save all their currently open chrome tabs with a single click, allowing them to quickly re-open their tabs back up exactly where they left off.
 
-        - Beludia allows you to save tabs in multiple windows, remembers the order your tabs were arranged in, and remembers whether your chrome window was regular or incognito.
+        - Allows you to save tabs in multiple windows, remembers the order your tabs were arranged in, and remembers whether your chrome window was regular or incognito.
 
-        - It has the ability to periodically save all your currently tabs. An input box which allows the user to specify the auto save frequency in which they'd like their tabs to automatically be saved.
+        - Has the ability to periodically save all your currently tabs. An input box which allows the user to specify the auto save frequency in which they'd like their tabs to automatically be saved.
     
-        - You can now also export all currently open Chrome tabs into your Chrome Bookmarks.
+        - Allows you to export all currently open Chrome tabs into your Chrome Bookmarks.
 
         
         Written in HTML, CSS and vanilla Javascript.`,
@@ -32,18 +38,24 @@ const projectData: Project[] = [
     {
         mainHeading: "LIFE PLANNER",
         subHeading: "React Native / Express.js Full Stack App",
-        description: `A project I’m a part of at the moment is a group project I’m working on with 2 fellow compsci grads from uni. It is a “life planner” app which aims to help people increase their day to day productivity, set goals, and essentially help them track the improvement of their life over time. We are designing the UI in Figma, then building it out using React Native (with Typescript), Redux, Node.js/Express, and Firebase firestore.`,
+        description: `A group project that I’m a part of at the moment with a two of my fellow compsci grads from uni. 
+        
+        This app aims to be a “life planner” application which has the goal of helping people increase their day to day productivity, set goals, and essentially help them track the improvement of their life over time.
+        
+        We are designing the UI in Figma. Front end built using React Native (with Typescript) and Redux.
+        
+        The backend is created with Node.js/Express.js.`,
         techStack: "REACT NATIVE, REDUX, TYPESCRIPT, NODE.JS, EXPRESS.JS, OAUTH, FIREBASE",
         imageArray: ["lifeplanner_preview.png"],
     },
     {
         mainHeading: "Personal Portfolio",
         subHeading: "Personal Portfolio Site",
-        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.
+        description: `A Personal Portfolio Website built to showcase my past projects and experiences.
         
-        Lorem ipsum dolor sit amet, consectetur adipiscing.`,
+        UI designed in Figma. Frontend built using Next.js, Typescript, Tailwind CSS and animated with Framer Motion!
+        
+        Hosted on Vercel.`,
         techStack: "NEXT.JS, TYPESCRIPT, TAILWIND.CSS, FRAMER MOTION",
         imageArray: ["personal_portfolio_landing.png"],
     },
@@ -52,11 +64,11 @@ const projectData: Project[] = [
         subHeading: "Python Automated Instagram Bot",
         description: `I created this instagram bot as a side project to see if I could get it to complete numerous tasks automatically for me on Instagram.
         
-        The bot is written in Python, using the Selenium library as a webscraper to carry out tasks. The bot’s functions are exposed as a REST API using Flask.
+        The bot is written in Python, using the Selenium library as a webscraper to carry out tasks. The bot’s functions are exposed as a REST API using Flask. Persistant data stored with a MySQL Database.
         
-        Also hosted this bot on an AWS EC2 ubuntu instance, in a docker container which is setup with an Nginx server hosting flask API. It also has a Selenium Grid with a firefox node running with it to carry out the webscraping tasks.
+        This bot is hosted on an AWS EC2 ubuntu instance, in a docker container which is setup with an Nginx server hosting the python flask API. It also has a Selenium Grid with a firefox node running with it to carry out the webscraping tasks.
         `,
-        techStack: "PYTHON, FLASK, SELENIUM, HEADLESS CHROME, AWS EC2, DOCKER",
+        techStack: "PYTHON, FLASK, MYSQL, AWS EC2, SELENIUM, HEADLESS CHROME, DOCKER",
         imageArray: ["dashboard_screenshot_1.png"],
     },
 ];
