@@ -3,6 +3,8 @@ import Grid from "../layout/Grid";
 import CatSvg from "../ui/CatSvg";
 import ScrollingText from "./ScrollingText";
 
+const email = "clmccnnll@gmail.com";
+
 const Footer = () => {
     return (
         <div>
@@ -20,9 +22,9 @@ const Footer = () => {
                             </p>
                             <a
                                 className="font-serif text-[8vw] sm:text-6xl xl:text-7xl hover:text-secondary-hover-color !leading-[1.1] underline underline-offset-8 decoration-2 cursor-pointer"
-                                href="mailto:hello@colemcconnell.co"
+                                href={`mailto:${email}`}
                             >
-                                hello@colemcconnell.co
+                                {email}
                             </a>
                         </div>
                     </div>
