@@ -2,10 +2,12 @@ import Image from "next/image";
 import React, { ReactElement } from "react";
 import SelectedWorks from "../../models/SelectedWorks";
 
+const repoUrl = process.env.NEXT_PUBLIC_REPO_URL || "";
+
 const SelectedWorksItem: React.FC<{ data: SelectedWorks; index: number }> = props => {
     const techStackList = props.data.techStack.split(",").join(" \u2022 ");
 
-    const imagePath = `/assets/images/${props.data.imageArray[0]}`;
+    const imagePath = `${repoUrl}/assets/images/${props.data.imageArray[0]}`;
     const previewImage = (
         <Image
             src={imagePath}

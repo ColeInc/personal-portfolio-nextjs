@@ -6,13 +6,15 @@ import Footer from "../../components/footer/Footer";
 import Layout from "../../components/layout/Layout";
 import NavBar from "../../components/navBar/NavBar";
 
+const repoUrl = process.env.NEXT_PUBLIC_REPO_URL || "";
+
 const About = () => {
     return (
         <>
             <Head>
                 <title>ABOUT</title>
                 <meta name="description" content="About me - Cole McConnell" />
-                <link rel="icon" href="/assets/icons/C-icon-180x180.ico" />
+                <link rel="icon" href={`${repoUrl}/assets/icons/C-icon-180x180.ico`} />
             </Head>
             <Layout>
                 <>

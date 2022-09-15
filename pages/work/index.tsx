@@ -5,6 +5,8 @@ import ProjectItem from "../../components/projects/ProjectItem";
 import RotateArcText from "../../components/ui/RotateArcText";
 import Project from "../../models/Project";
 
+const repoUrl = process.env.NEXT_PUBLIC_REPO_URL || "";
+
 const projectData: Project[] = [
     {
         mainHeading: "Mosa",
@@ -79,7 +81,7 @@ const Projects = () => {
             <Head>
                 <title>WORK</title>
                 <meta name="description" content="Selected Works - Cole McConnell" />
-                <link rel="icon" href="/assets/icons/C-icon-180x180.ico" />
+                <link rel="icon" href={`${repoUrl}/assets/icons/C-icon-180x180.ico`} />
             </Head>
             <Layout>
                 <>
