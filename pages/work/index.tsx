@@ -4,6 +4,7 @@ import Layout from "../../components/layout/Layout";
 import ProjectItem from "../../components/projects/ProjectItem";
 import RotateArcText from "../../components/ui/RotateArcText";
 import Project from "../../models/Project";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const repoUrl = process.env.NEXT_PUBLIC_REPO_URL || "";
 
@@ -76,6 +77,11 @@ const projectData: Project[] = [
 ];
 
 const Projects = () => {
+    const { scrollY } = useScroll();
+    // As the value of the vertical viewpoint moves from 0 to 100, map this increase value to a corresponding decreasing value from 0 down to -20, and do it perpetually for every 100px scrolled (clamp=false does this)
+    const scrollLeft = useTransform(scrollY, [0, 100], [0, 20], { clamp: false });
+    const scrollRight = useTransform(scrollY, [0, 100], [0, -20], { clamp: false });
+
     return (
         <>
             <Head>
@@ -85,9 +91,11 @@ const Projects = () => {
             </Head>
             <Layout>
                 <>
-                    <div className="flex flex-col text-transparent text-[72px] sm:text-20xl xl:text-[268px] text-stroke-sm xl:text-stroke-md !leading-[.75] mx-8 md:mx-16 pt-16 md:pt-20 xl:pt-20 pb-28 md:pb-28 xl:pb-28">
-                        <h1 className="">PREVIOUS</h1>
-                        <h1 className="self-end">WORKS</h1>
+                    <div className="flex flex-col text-transparent text-[72px] sm:text-20xl xl:text-[268px] text-stroke-sm xl:text-stroke-md !leading-[.75] px-8 md:px-16 pt-16 md:pt-20 xl:pt-20 pb-28 md:pb-28 xl:pb-28 overflow-hidden">
+                        <motion.h1 style={{ x: scrollRight }}>PREVIOUS</motion.h1>
+                        <motion.h1 style={{ x: scrollLeft }} className="self-end">
+                            WORKS
+                        </motion.h1>
                     </div>
 
                     <div className="flex justify-center">

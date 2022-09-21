@@ -1,5 +1,5 @@
 # personal-portfolio-nextjs
 
-Personal website portfolio of Cole McConnell 🌱
+A fully responsive personal portfolio site, built using Next.js, Tailwind CSS, Typescript and Framer Motion 🌱
 
 ![personal portfolio landing page](https://drive.google.com/uc?export=view&id=1UqvYYE24xjpC3ibGj9gT6BjyUg_seUL3)
