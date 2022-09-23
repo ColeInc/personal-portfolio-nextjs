@@ -71,7 +71,6 @@ const ProjectItem: React.FC<{ data: Project; index: number }> = props => {
             <motion.div
                 className="!w-full flex-grow pb-4 md:pb-6 xl:pb-14 border-t border-secondary-color group-hover:border-secondary-hover-color group-hover:fill-secondary-hover-color group-hover:text-secondary-hover-color"
                 variants={lineVariant}
-                viewport={{ once: true }}
             />
             <div className="flex flex-col flex-1 justify-start w-full md:pr-6">
                 <div className="flex flex-row justify-between md:justify-start items-end">

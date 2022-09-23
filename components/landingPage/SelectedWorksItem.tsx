@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import SelectedWorks from "../../models/SelectedWorks";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const repoUrl = process.env.NEXT_PUBLIC_REPO_URL || "";
 
@@ -38,7 +39,16 @@ const headingVariant = {
 };
 
 const SelectedWorksItem: React.FC<{ data: SelectedWorks; index: number }> = props => {
-    const techStackList = props.data.techStack.split(",").join(" \u2022 ");
+    const control = useAnimation();
+    const [ref, inView] = useInView();
+
+    useEffect(() => {
+        if (inView) {
+            control.start("visible");
+        } else {
+            control.start("hidden");
+        }
+    }, [control, inView]);
 
     const imagePath = `${repoUrl}/assets/images/${props.data.imageArray[0]}`;
     const previewImage = (
@@ -52,11 +62,16 @@ const SelectedWorksItem: React.FC<{ data: SelectedWorks; index: number }> = prop
         />
     );
 
+    const techStackList = props.data.techStack.split(",").join(" \u2022 ");
+
     return (
         <>
             <motion.div
                 className="flex flex-wrap justify-between pb-3 md:pb-6 group hover:text-secondary-hover-color hover:fill-secondary-hover-color last:border-b last:border-secondary-color last:hover:border-b last:hover:border-secondary-hover-color highlight-top-border"
+                ref={ref}
                 variants={itemVariant}
+                initial="hidden"
+                animate={control}
             >
                 <motion.div
                     className="w-full h-5 flex-grow pb-4 md:pb-6 border-t border-secondary-color group-hover:border-secondary-hover-color group-hover:fill-secondary-hover-color group-hover:text-secondary-hover-color"

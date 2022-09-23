@@ -33,13 +33,6 @@ const headerVariant = {
     },
 };
 
-const selectedWorksContainerVariant = {
-    hidden: {},
-    visible: {
-        transition: { duration: 2, ease: "easeInOut", staggerChildren: 0.2 },
-    },
-};
-
 const projectsButtonVariant = {
     hidden: {
         opacity: 0,
@@ -48,49 +41,48 @@ const projectsButtonVariant = {
     visible: {
         opacity: 1,
         x: 0,
-        transition: { delay: 1, duration: 2, ease: "easeInOut" },
+        transition: { duration: 0.8, ease: "easeInOut" },
     },
 };
 
 const SelectedWorks = () => {
-    const control = useAnimation();
+    // Heading's useAnimation and Ref:
+    const headingControl = useAnimation();
     const [ref, inView] = useInView();
+    // "See all Projects" Button's useAnimation and Ref:
+    const callToActionControl = useAnimation();
+    const [callToActionRef, callToActionInView] = useInView();
 
     useEffect(() => {
         if (inView) {
-            control.start("visible");
-        } else {
-            control.start("hidden");
+            headingControl.start("visible");
         }
-    }, [control, inView]);
+        callToActionInView ? callToActionControl.start("visible") : callToActionControl.start("hidden");
+    }, [headingControl, callToActionControl, inView, callToActionInView]);
 
     return (
         <div className="flex justify-center">
             <div className="py-36 sm:py-64 xl:py-[37vh] mx-6 sm:mx-[6%] xl:mx-[8%] xl:max-w-[130rem]">
                 <motion.h1
                     className="text-transparent text-[48px] sm:text-8xl xl:text-10xl text-stroke-sm xl:text-stroke-md !leading-[.75] pb-4 sm:pb-5 xl:pb-6"
+                    ref={ref}
                     variants={headerVariant}
                     initial="hidden"
-                    animate={control}
+                    animate={headingControl}
                 >
                     SELECTED WORK
                 </motion.h1>
-                <motion.div
-                    className="hover:highlight-top-border"
-                    ref={ref}
-                    variants={selectedWorksContainerVariant}
-                    initial="hidden"
-                    animate={control}
-                >
+                <motion.div className="hover:highlight-top-border">
                     {projectData.map((item, index) => {
                         return <SelectedWorksItem key={index} index={index + 1} data={item} />;
                     })}
                 </motion.div>
                 <motion.div
                     className="flex justify-end"
+                    ref={callToActionRef}
                     variants={projectsButtonVariant}
                     initial="hidden"
-                    animate={control}
+                    animate={callToActionControl}
                 >
                     <Link href="/work">
                         <div className="flex items-center group pt-3 sm:pt-4 xl:pt-6 group hover:text-secondary-hover-color">
