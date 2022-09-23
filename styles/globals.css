@@ -68,7 +68,7 @@ a {
     background-position: 0 90%;
 }
 
-.highlight-top-border:hover + div {
+.highlight-top-border:hover + div > div:first-child {
     border-top: 1px solid var(--secondary-hover-color);
 }
 
