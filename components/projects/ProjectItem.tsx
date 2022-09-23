@@ -1,11 +1,50 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Project from "../../models/Project";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const repoUrl = process.env.NEXT_PUBLIC_REPO_URL || "";
 
+const itemVariant = {
+    hidden: {
+        opacity: 0.3,
+        x: 50,
+    },
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            duration: 1,
+            ease: "easeOut",
+        },
+    },
+};
+
+const lineVariant = {
+    hidden: {
+        marginRight: "100%",
+    },
+    visible: {
+        marginRight: 0,
+        transition: {
+            duration: 0.6,
+            once: true,
+        },
+    },
+};
+
 const ProjectItem: React.FC<{ data: Project; index: number }> = props => {
-    const techStackList = props.data.techStack.split(",").join(" \u2022 ");
+    const control = useAnimation();
+    const [ref, inView] = useInView();
+
+    useEffect(() => {
+        if (inView) {
+            control.start("visible");
+        } else {
+            control.start("hidden");
+        }
+    }, [control, inView]);
 
     const imagePath = `${repoUrl}/assets/images/${props.data.imageArray[0]}`;
     const previewImage = (
@@ -19,9 +58,22 @@ const ProjectItem: React.FC<{ data: Project; index: number }> = props => {
         />
     );
 
+    const techStackList = props.data.techStack.split(",").join(" \u2022 ");
+
     return (
-        <div className="flex justify-between pt-4 pb-3 md:py-8 xl:py-14 border-t border-secondary-color group hover:border-secondary-hover-color hover:text-secondary-hover-color hover:fill-secondary-hover-color highlight-top-border last:border-b last:border-secondary-color last:hover:border-b">
-            <div className="flex flex-col justify-start w-full md:pr-6">
+        <motion.div
+            className="flex flex-wrap justify-between pb-3 md:pb-8 xl:pb-14 group hover:text-secondary-hover-color highlight-top-border last:border-b last:border-secondary-color last:hover:border-b last:hover:border-secondary-hover-color"
+            ref={ref}
+            variants={itemVariant}
+            initial="hidden"
+            animate={control}
+        >
+            <motion.div
+                className="!w-full flex-grow pb-4 md:pb-6 xl:pb-14 border-t border-secondary-color group-hover:border-secondary-hover-color group-hover:fill-secondary-hover-color group-hover:text-secondary-hover-color"
+                variants={lineVariant}
+                viewport={{ once: true }}
+            />
+            <div className="flex flex-col flex-1 justify-start w-full md:pr-6">
                 <div className="flex flex-row justify-between md:justify-start items-end">
                     <div className="flex-col">
                         <h1 className="text-[36pt] sm:text-[56px] xl:text-[78px] group-hover:!font-gray-300 !leading-[.9] xl:!leading-[.95]">
@@ -49,10 +101,10 @@ const ProjectItem: React.FC<{ data: Project; index: number }> = props => {
                     <p className="text-[8pt] md:text-[9px] xl:text-base !leading-[1] font-sans">{techStackList}</p>
                 </div>
             </div>
-            <div className="hidden md:flex w-[42vw] h-[24vw] xl:w-[37vw] xl:h-[21.2vw] xl:max-w-[55rem] xl:max-h-[32rem] shrink-0 bg-black relative">
+            <div className="hidden md:flex flex-grow-0 w-[42vw] h-[24vw] xl:w-[37vw] xl:h-[21.2vw] xl:max-w-[55rem] xl:max-h-[32rem] shrink-0 bg-black relative">
                 {previewImage}
             </div>
-        </div>
+        </motion.div>
     );
 };
 

@@ -17,11 +17,13 @@ const itemVariant = {
 
 const lineVariant = {
     hidden: {
-        width: 0,
+        marginRight: "100%",
     },
     visible: {
-        width: "100%",
-        transition: { duration: 0.3 },
+        marginRight: 0,
+        transition: {
+            duration: 0.6,
+        },
     },
 };
 
@@ -53,15 +55,14 @@ const SelectedWorksItem: React.FC<{ data: SelectedWorks; index: number }> = prop
     return (
         <>
             <motion.div
-                className="w-full h-[1px] border-t border-secondary-color group hover:border-secondary-hover-color hover:text-secondary-hover-color hover:fill-secondary-hover-color highlight-top-border last:border-b last:border-secondary-color last:hover:border-b"
-                variants={lineVariant}
-                layout
-            />
-            <motion.div
-                className="flex justify-between pt-4 pb-3 md:py-6 group hover:text-secondary-hover-color hover:fill-secondary-hover-color last:border-b last:border-secondary-color last:hover:border-b"
+                className="flex flex-wrap justify-between pb-3 md:pb-6 group hover:text-secondary-hover-color hover:fill-secondary-hover-color last:border-b last:border-secondary-color last:hover:border-b last:hover:border-secondary-hover-color highlight-top-border"
                 variants={itemVariant}
             >
-                <div className="flex flex-col justify-between md:pr-6 w-full">
+                <motion.div
+                    className="w-full h-5 flex-grow pb-4 md:pb-6 border-t border-secondary-color group-hover:border-secondary-hover-color group-hover:fill-secondary-hover-color group-hover:text-secondary-hover-color"
+                    variants={lineVariant}
+                />
+                <div className="flex flex-col flex-1 justify-between md:pr-6 w-full">
                     <motion.h1
                         className="text-3xl sm:text-[40px] xl:text-6xl group-hover:!font-gray-300 !leading-[.75] md:pb-6"
                         variants={headingVariant}
@@ -76,7 +77,7 @@ const SelectedWorksItem: React.FC<{ data: SelectedWorks; index: number }> = prop
                         <p className="text-[7pt] sm:text-[13px] xl:text-base font-sans !leading-[1]">{techStackList}</p>
                     </div>
                 </div>
-                <div className="hidden md:flex w-[30vw] xl:w-[25vw] h-[17vw] xl:h-[14vw] xl:max-w-[55rem] xl:max-h-[32rem] shrink-0 bg-black relative">
+                <div className="hidden flex-grow-0 md:flex w-[30vw] xl:w-[25vw] h-[17vw] xl:h-[14vw] xl:max-w-[55rem] xl:max-h-[32rem] shrink-0 bg-black relative">
                     {previewImage}
                 </div>
             </motion.div>

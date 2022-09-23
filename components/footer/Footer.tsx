@@ -32,7 +32,7 @@ const Footer = () => {
 
             <Grid className="py-36 sm:py-44 xl:py-72">
                 <>
-                    <div className="flex justify-between items-center col-span-4 sm:col-span-8 xl:col-start-3">
+                    <div className="flex justify-between items-center col-span-4 sm:col-span-8 xl:col-start-3 overflow-hidden">
                         <div className="w-[150px] h-[150px] hidden sm:flex justify-end items-end">
                             <CatSvg />
                         </div>
