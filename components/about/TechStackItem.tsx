@@ -12,7 +12,7 @@ const TechStackItem: React.FC<{ data: TechStack }> = props => {
                     return (
                         <div
                             className="flex justify-center items-center font-sans font-extralight xl:font-light text-xs md:text-base xl:text-[20px] border border-secondary-color hover:text-main-background-color hover:bg-white rounded-full py-[5px] xl:py-[10px] px-[26px] md:px-[32px] xl:px-[42px] mr-3 xl:mr-4 mb-2 md:mb-3 xl:mb-4 hover:cursor-pointer"
-                            key="item"
+                            key={item}
                         >
                             {item.toUpperCase()}
                         </div>

@@ -1,13 +1,24 @@
 import React from "react";
 import RotateArcText from "../ui/RotateArcText";
+import { motion } from "framer-motion";
+
+const headerVariant = {
+    hidden: { opacity: 0.2 },
+    visible: { opacity: 1, transition: { duration: .5 } },
+};
 
 const HeroText = () => {
     return (
         <div className="overflow-hidden">
-            <h1 className="text-transparent text-[12vw] sm:text-[11vw] xl:!text-[10.5vw] text-stroke-sm xl:text-stroke-md !leading-[.75] px-6 sm:px-14 xl:px-24 pt-14 sm:pt-6 xl:pt-5">
+            <motion.h1
+                className="text-transparent text-[12vw] sm:text-[11vw] xl:!text-[10.5vw] text-stroke-sm xl:text-stroke-md !leading-[.75] px-6 sm:px-14 xl:px-24 pt-14 sm:pt-6 xl:pt-5"
+                variants={headerVariant}
+                initial="hidden"
+                animate="visible"
+            >
                 HI I&rsquo;M COLE MCCONNELL.
                 <br />A FRONT END DEVELOPER IN AUCKLAND, NEW ZEALAND.
-            </h1>
+            </motion.h1>
             <div className="sm:h-screen w-full absolute top-0">
                 <RotateArcText
                     text="COLE MCCONNELL - FRONT END DEVELOPER -"

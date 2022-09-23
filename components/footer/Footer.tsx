@@ -1,11 +1,31 @@
 import Image from "next/image";
+import { useEffect } from "react";
 import Grid from "../layout/Grid";
 import CatSvg from "../ui/CatSvg";
 import ScrollingText from "./ScrollingText";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
+const callToActionVariant = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 1.5, ease: "easeOut" } },
+};
+
+// MAH EMAIL:
 const email = "clmccnnll@gmail.com";
 
 const Footer = () => {
+    const control = useAnimation();
+    const [ref, inView] = useInView();
+
+    useEffect(() => {
+        if (inView) {
+            control.start("visible");
+        } else {
+            control.start("hidden");
+        }
+    }, [control, inView]);
+
     return (
         <div>
             <ScrollingText />
@@ -16,7 +36,13 @@ const Footer = () => {
                         <div className="w-[150px] h-[150px] hidden sm:flex justify-end items-end">
                             <CatSvg />
                         </div>
-                        <div className="flex flex-col sm:w-[39rem] xl:w-[42rem] text-right">
+                        <motion.div
+                            className="flex flex-col sm:w-[39rem] xl:w-[42rem] text-right"
+                            ref={ref}
+                            variants={callToActionVariant}
+                            initial="hidden"
+                            animate={control}
+                        >
                             <p className="font-sans text-sm sm:text-[22px] xl:text-2xl font-light !leading-[1] xl:pb-2">
                                 IF YOU&rsquo;D LIKE TO CONTACT ME FOR ANY QUESTIONS OR QUERIES, FLICK ME AN EMAIL AT
                             </p>
@@ -26,7 +52,7 @@ const Footer = () => {
                             >
                                 {email}
                             </a>
-                        </div>
+                        </motion.div>
                     </div>
                 </>
             </Grid>
