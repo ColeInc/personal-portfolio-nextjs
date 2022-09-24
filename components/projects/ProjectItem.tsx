@@ -1,25 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Project from "../../models/Project";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const repoUrl = process.env.NEXT_PUBLIC_REPO_URL || "";
-
-const itemVariant = {
-    hidden: {
-        opacity: 0.3,
-        x: 50,
-    },
-    visible: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            duration: 1,
-            ease: "easeOut",
-        },
-    },
-};
 
 const lineVariant = {
     hidden: {
@@ -35,6 +20,8 @@ const lineVariant = {
 };
 
 const ProjectItem: React.FC<{ data: Project; index: number }> = props => {
+    const [desktopView, setDesktopView] = useState(false);
+
     const control = useAnimation();
     const [ref, inView] = useInView();
 
@@ -45,6 +32,47 @@ const ProjectItem: React.FC<{ data: Project; index: number }> = props => {
             control.start("hidden");
         }
     }, [control, inView]);
+
+    useEffect(() => {
+        // If media query is more than 768px wide (anything above tailwind "md" default breakpoint), then setDesktopView state to true so we can set custom framer motion variant for tablet/mobile
+        const media = window.matchMedia("(min-width: 768px)");
+        if (media.matches === desktopView) {
+            setDesktopView(media.matches);
+        }
+        const listener = () => {
+            setDesktopView(media.matches);
+        };
+        media.addListener(listener);
+        return () => media.removeListener(listener);
+    }, [desktopView]);
+
+    const itemVariant = desktopView
+        ? {
+              hidden: {
+                  opacity: 0.3,
+                  x: 50,
+              },
+              visible: {
+                  opacity: 1,
+                  x: 0,
+                  transition: {
+                      duration: 1,
+                      ease: "easeOut",
+                  },
+              },
+          }
+        : {
+              hidden: {
+                  opacity: 0.3,
+              },
+              visible: {
+                  opacity: 1,
+                  transition: {
+                      duration: 1,
+                      ease: "easeOut",
+                  },
+              },
+          };
 
     const imagePath = `${repoUrl}/assets/images/${props.data.imageArray[0]}`;
     const previewImage = (
@@ -62,7 +90,7 @@ const ProjectItem: React.FC<{ data: Project; index: number }> = props => {
 
     return (
         <motion.div
-            className="flex flex-wrap justify-between pb-3 md:pb-8 xl:pb-14 group hover:text-secondary-hover-color highlight-top-border last:border-b last:border-secondary-color last:hover:border-b last:hover:border-secondary-hover-color"
+            className="flex flex-wrap justify-between pb-3 md:pb-8 xl:pb-14 group hover:text-secondary-hover-color highlight-top-border last:border-b last:border-secondary-color last:hover:border-b last:hover:border-secondary-hover-color overflow-hidden"
             ref={ref}
             variants={itemVariant}
             initial="hidden"
