@@ -129,7 +129,7 @@ const Projects = () => {
                                 })}
                             </div>
 
-                            <div className="flex justify-end w-full pt-6 md:pt-12 xl:pt-18 pb-40 md:pb-60">
+                            <div className="flex w-full justify-end pt-6 md:pt-12 xl:pt-18 pb-40 md:pb-60 overflow-hidden">
                                 <RotateArcText
                                     text="COLE MCCONNELL - FRONT END DEVELOPER -"
                                     textSize="text-[6.8px]"
