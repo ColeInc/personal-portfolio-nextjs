@@ -32,10 +32,22 @@ const Footer = () => {
 
             <Grid className="py-36 sm:py-44 xl:py-72">
                 <>
-                    <div className="flex justify-between items-center col-span-4 sm:col-span-8 xl:col-start-3 overflow-hidden">
-                        <div className="w-[150px] h-[150px] hidden sm:flex justify-end items-end">
+                    <div className="flex justify-between items-center col-span-4 sm:col-span-8 xl:col-start-3 overflow-hidden md:overflow-visible">
+                        <motion.div
+                            className="w-[150px] h-[150px] hidden sm:flex justify-end items-end cursor-pointer"
+                            whileHover={{ rotate: 360 }}
+                            transition={{ ease: "linear", duration: 2, repeat: Infinity }}
+                            drag
+                            // dragConstraints={{
+                            //     top: 0,
+                            //     right: 0,
+                            //     bottom: 0,
+                            //     left: 0,
+                            // }}
+                            whileTap={{ cursor: "grabbing" }}
+                        >
                             <CatSvg />
-                        </div>
+                        </motion.div>
                         <motion.div
                             className="flex flex-col sm:w-[39rem] xl:w-[42rem] text-right"
                             ref={ref}
