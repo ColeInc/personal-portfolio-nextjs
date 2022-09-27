@@ -67,7 +67,7 @@ const SelectedWorksItem: React.FC<{ data: SelectedWorks; index: number }> = prop
     return (
         <>
             <motion.div
-                className="flex flex-wrap justify-between pb-3 md:pb-6 group hover:text-secondary-hover-color hover:fill-secondary-hover-color last:border-b last:border-secondary-color last:hover:border-b last:hover:border-secondary-hover-color highlight-top-border"
+                className="flex flex-wrap justify-between pb-3 md:pb-6 group hover:text-secondary-hover-color hover:fill-secondary-hover-color last:border-b last:border-secondary-color last:hover:border-b last:hover:border-secondary-hover-color highlight-top-border cursor-default"
                 ref={ref}
                 variants={itemVariant}
                 initial="hidden"

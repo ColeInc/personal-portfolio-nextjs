@@ -1,8 +1,9 @@
+import React, { useCallback, useContext, useEffect } from "react";
 import Image from "next/image";
-import { useEffect } from "react";
 import Grid from "../layout/Grid";
 import CatSvg from "../ui/CatSvg";
 import ScrollingText from "./ScrollingText";
+import { CursorContext } from "../ui/Cursor";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -17,6 +18,7 @@ const email = "clmccnnll@gmail.com";
 const Footer = () => {
     const control = useAnimation();
     const [ref, inView] = useInView();
+    const [, setCursor] = useContext(CursorContext);
 
     useEffect(() => {
         if (inView) {
@@ -25,6 +27,10 @@ const Footer = () => {
             control.start("hidden");
         }
     }, [control, inView]);
+
+    const toggleCursor = useCallback(() => {
+        setCursor(prevState => !prevState);
+    }, [setCursor]);
 
     return (
         <div>
@@ -61,6 +67,8 @@ const Footer = () => {
                             <a
                                 className="font-serif text-[8vw] sm:text-6xl xl:text-7xl hover:text-secondary-hover-color !leading-[1.1] underline underline-offset-8 decoration-2 cursor-pointer"
                                 href={`mailto:${email}`}
+                                onMouseEnter={toggleCursor}
+                                onMouseLeave={toggleCursor}
                             >
                                 {email}
                             </a>
@@ -76,6 +84,8 @@ const Footer = () => {
                         href="https://github.com/ColeInc"
                         target="_blank"
                         rel="noopener noreferrer"
+                        onMouseEnter={toggleCursor}
+                        onMouseLeave={toggleCursor}
                     >
                         GITHUB
                     </a>
@@ -84,19 +94,23 @@ const Footer = () => {
                         href="https://linkedin.com/in/cole-mcconnell"
                         target="_blank"
                         rel="noopener noreferrer"
+                        onMouseEnter={toggleCursor}
+                        onMouseLeave={toggleCursor}
                     >
                         LINKEDIN
                     </a>
                     <a
-                        className=" hover:text-secondary-hover-color"
+                        className="hover:text-secondary-hover-color"
                         href="https://twitter.com/developer_cole"
                         target="_blank"
                         rel="noopener noreferrer"
+                        onMouseEnter={toggleCursor}
+                        onMouseLeave={toggleCursor}
                     >
                         TWITTER
                     </a>
                 </div>
-                <p className="font-sans text-[8px] sm:text-[10px] xl:text-xs text-footer-copyright-color">
+                <p className="font-sans text-[8px] sm:text-[10px] xl:text-xs text-footer-copyright-color cursor-pointer hover:invert">
                     &copy; 2022. COLE MCCONNELL. ALL RIGHTS RESERVED.
                 </p>
             </div>

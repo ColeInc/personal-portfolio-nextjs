@@ -3,6 +3,7 @@ import Image from "next/image";
 import Project from "../../models/Project";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import GithubSvg from "../ui/GithubSvg";
 
 const repoUrl = process.env.NEXT_PUBLIC_REPO_URL || "";
 
@@ -90,7 +91,7 @@ const ProjectItem: React.FC<{ data: Project; index: number }> = props => {
 
     return (
         <motion.div
-            className="flex flex-wrap justify-between pb-3 md:pb-8 xl:pb-14 group hover:text-secondary-hover-color highlight-top-border last:border-b last:border-secondary-color last:hover:border-b last:hover:border-secondary-hover-color overflow-hidden"
+            className="flex flex-wrap justify-between pb-3 md:pb-8 xl:pb-14 group hover:text-secondary-hover-color highlight-top-border last:border-b last:border-secondary-color last:hover:border-b last:hover:border-secondary-hover-color cursor-default overflow-hidden"
             ref={ref}
             variants={itemVariant}
             initial="hidden"
@@ -122,10 +123,12 @@ const ProjectItem: React.FC<{ data: Project; index: number }> = props => {
                 </p>
 
                 <div className="flex items-end md:mt-auto">
-                    <h3 className="text-[70px] md:text-[52px] hidden md:flex text-transparent text-stroke-sm !leading-[.70] group-hover:text-stroke-hovered self-start md:pr-5 xl:pr-7">
+                    <h3 className="text-[70px] md:text-[52px] hidden md:flex text-transparent text-stroke-sm !leading-[.70] group-hover:text-stroke-hovered md:pr-5 xl:pr-7">
                         {props.index.toString().padStart(2, "0")}
                     </h3>
                     <p className="text-[8pt] md:text-[9px] xl:text-base !leading-[1] font-sans">{techStackList}</p>
+
+                    {props.data.githubUrl && <GithubSvg href={props.data.githubUrl} />}
                 </div>
             </div>
             <div className="hidden md:flex flex-grow-0 w-[42vw] h-[24vw] xl:w-[37vw] xl:h-[21.2vw] xl:max-w-[55rem] xl:max-h-[32rem] shrink-0 bg-black relative">

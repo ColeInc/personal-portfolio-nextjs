@@ -48,7 +48,7 @@ const LandingParagraph = () => {
                         className="!col-start-4 col-span-4 xl:col-span-6 text-lg sm:text-xl xl:text-[29px] leading-[1.2] sm:leading-[1.1] sm:text-right xl:text-left font-sans !font-extralight"
                         variants={itemVariant}
                     >
-                        HI THERE I&rsquo;M COLE, A FRONT END DEVELOPER CURRENTLY LIVING IN AUCKLAND, NEW ZEALAND.
+                        HI THERE, I&rsquo;M COLE. A FRONT END DEVELOPER CURRENTLY LIVING IN AUCKLAND, NEW ZEALAND.
                         <br />
                         WITH NEARLY 3 YEARS OF DEVELOPMENT EXPERIENCE, I LOVE TAKING THE SKILLS, EXPERIENCE AND KNOW-HOW
                         I&rsquo;VE ACQUIRED AND PUTTING THEM TO USE BY CREATING AMAZING DESIGNS AND EXPERIENCES.

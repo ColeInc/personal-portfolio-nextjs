@@ -14,10 +14,11 @@ const paragraphVariant = {
 
 const AboutParagraph = () => {
     return (
-        <Grid className="!inline-block sm:!grid sm:gap-y-0 mx-6 sm:mx-0 pb-40 md:pb-52 xl:pb-[19rem]">
+        <Grid className="!inline-block sm:!grid sm:gap-y-0 mx-6 sm:mx-0 pb-40 md:pb-52 xl:pb-[19rem] overflow-hidden">
             <>
+                {/* <div className="overflow-hidden"> */}
                 <motion.div
-                    className="sm:col-start-4 xl:col-start-6 col-span-4 xl:col-span-5 text-lg sm:text-xl xl:text-[24px] leading-[1.2] sm:leading-[1.1] sm:text-right xl:text-left font-sans !font-extralight"
+                    className="sm:col-start-4 xl:col-start-6 col-span-4 xl:col-span-5 text-lg sm:text-xl xl:text-[24px] leading-[1.2] sm:leading-[1.1] sm:text-right xl:text-left font-sans !font-extralight "
                     variants={paragraphVariant}
                     initial="hidden"
                     animate="visible"
@@ -35,6 +36,7 @@ const AboutParagraph = () => {
                         PROJECTS.
                     </p>
                 </motion.div>
+                {/* </div> */}
 
                 <RotateArcText
                     text="COLE MCCONNELL - FRONT END DEVELOPER -"

@@ -17,6 +17,9 @@ module.exports = {
                 "cat-hover-color": "var(--cat-hover-color)",
                 "footer-copyright-color": "var(--footer-copyright-color)",
             },
+            screens: {
+                "3xl": "2560px",
+            },
         },
     },
     plugins: [],

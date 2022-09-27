@@ -7,6 +7,13 @@ export const themeColors = [
         footerCopyrightColor: "#9ca3af",
     },
     {
+        mainBackgroundColor: "#474240",
+        secondaryColor: "#d3d3d3",
+        secondaryHoverColor: "#b2b2b3",
+        catHoverColor: "#f3f4f61a",
+        footerCopyrightColor: "#9ca3af",
+    },
+    {
         mainBackgroundColor: "#0F0F10",
         secondaryColor: "#d3d3d3",
         secondaryHoverColor: "#b2b2b3",
