@@ -4,4 +4,5 @@ export default interface Project {
     description: string;
     techStack: string;
     imageArray: string[];
+    githubUrl?: string;
 }

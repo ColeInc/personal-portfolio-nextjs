@@ -95,3 +95,11 @@ a {
         transform: translateX(-100%);
     }
 }
+
+::selection {
+    background: #25ed9d4c; /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+    background: #25ed9d4c; /* Gecko Browsers */
+}

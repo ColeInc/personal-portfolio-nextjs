@@ -21,6 +21,7 @@ const projectData: Project[] = [
 
         techStack: "REACT.JS, REDUX, TYPESCRIPT, SCSS, NODE.JS, EXPRESS.JS, TWITTER API",
         imageArray: ["dashboard_screenshot_1.png", "dashboard_screenshot_2.png", "dashboard_screenshot_1.png"],
+        githubUrl: "https://github.com/ColeInc/twitter-dashboard-frontend",
     },
     {
         mainHeading: "Beludia",
@@ -37,6 +38,7 @@ const projectData: Project[] = [
         Written in HTML, CSS and vanilla Javascript.`,
         techStack: "CSS, HTML, JAVASCRIPT, CHROME API",
         imageArray: ["save_all_tabs_1280x690.png"],
+        githubUrl: "https://github.com/ColeInc/save_all_tabs",
     },
     {
         mainHeading: "LIFE PLANNER",
@@ -61,6 +63,7 @@ const projectData: Project[] = [
         Hosted on Vercel.`,
         techStack: "NEXT.JS, TYPESCRIPT, TAILWIND.CSS, FRAMER MOTION",
         imageArray: ["personal_portfolio_landing.png"],
+        githubUrl: "https://github.com/ColeInc/personal-portfolio-nextjs",
     },
     {
         mainHeading: "Instagram Bot",
@@ -73,6 +76,7 @@ const projectData: Project[] = [
         `,
         techStack: "PYTHON, FLASK, MYSQL, AWS EC2, SELENIUM, HEADLESS CHROME, DOCKER",
         imageArray: ["dashboard_screenshot_1.png"],
+        githubUrl: "https://github.com/ColeInc/instagram-post-scheduler-bot",
     },
 ];
 
@@ -101,7 +105,7 @@ const Projects = () => {
             </Head>
             <Layout>
                 <>
-                    <div className="flex flex-col text-transparent text-[72px] sm:text-20xl xl:text-[268px] text-stroke-sm xl:text-stroke-md !leading-[.75] px-8 md:px-16 pt-16 md:pt-20 xl:pt-20 pb-28 md:pb-28 xl:pb-28 overflow-hidden">
+                    <div className="flex flex-col text-transparent text-[72px] sm:text-20xl xl:text-[268px] text-stroke-sm xl:text-stroke-md !leading-[.75] px-8 md:px-16 3xl:px-[15%] pt-16 md:pt-20 xl:pt-20 pb-28 md:pb-28 xl:pb-28 overflow-hidden">
                         <motion.h1
                             style={{ x: scrollRight }}
                             variants={headingVariant}

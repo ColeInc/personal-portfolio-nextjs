@@ -50,13 +50,19 @@ const Socials = () => {
                     animate={control}
                 >
                     <div className="flex flex-col justify-start font-sans text-2xl xl:text-[30px] font-extralight md:text-right underline underline-offset-[4px] sm:underline-offset-4 decoration-[.5px] sm:decoration-1">
-                        <a className="pb-[6px] xl:pb-3" href="https://github.com/ColeInc">
+                        <a
+                            className="pb-[6px] xl:pb-3 hover:text-secondary-hover-color"
+                            href="https://github.com/ColeInc"
+                        >
                             GITHUB
                         </a>
-                        <a className="pb-[6px] xl:pb-3" href="https://linkedin.com/in/cole-mcconnell">
+                        <a
+                            className="pb-[6px] xl:pb-3 hover:text-secondary-hover-color"
+                            href="https://linkedin.com/in/cole-mcconnell"
+                        >
                             LINKEDIN
                         </a>
-                        <a className="" href="https://twitter.com/developer_cole">
+                        <a className="hover:text-secondary-hover-color" href="https://twitter.com/developer_cole">
                             TWITTER
                         </a>
                     </div>
