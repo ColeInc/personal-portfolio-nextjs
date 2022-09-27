@@ -75,7 +75,7 @@ const projectData: Project[] = [
         This bot is hosted on an AWS EC2 ubuntu instance, in a docker container which is setup with an Nginx server hosting the python flask API. It also has a Selenium Grid with a firefox node running with it to carry out the webscraping tasks.
         `,
         techStack: "PYTHON, FLASK, MYSQL, AWS EC2, SELENIUM, HEADLESS CHROME, DOCKER",
-        imageArray: ["dashboard_screenshot_1.png"],
+        imageArray: ["instagram_bot_1.png", "dashboard_screenshot_1.png"],
         githubUrl: "https://github.com/ColeInc/instagram-post-scheduler-bot",
     },
 ];

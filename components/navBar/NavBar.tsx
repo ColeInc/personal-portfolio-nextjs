@@ -40,7 +40,13 @@ const NavBar = () => {
     };
 
     return (
-        <div className="w-full flex justify-between items-center px-6 pt-6 sm:px-12 sm:pt-6 bg-transparent sticky top-0 z-50">
+        <div
+            className="w-full flex justify-between items-center px-6 pt-6 sm:px-12 sm:pt-6 bg-transparent sticky top-0 z-50"
+            // style={{
+            //     backgroundImage:
+            //         "url(https://thumbs.dreamstime.com/b/beautiful-multicolored-bokeh-lights-holiday-glitter-background-christmas-new-year-birthday-celebration-high-resolution-image-133585052.jpg)",
+            // }}
+        >
             <Link href="/">
                 <button
                     className="text-xs sm:text-lg font-sans cursor-pointer link link-underline"

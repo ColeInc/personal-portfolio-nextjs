@@ -32,7 +32,7 @@ const Cursor: React.FC<{ children: ReactElement }> = props => {
         <CursorContext.Provider value={[cursor, setCursor]}>
             {props.children}
 
-            <div className="fixed top-0 bottom-0 left-0 right-0 z-50 pointer-events-none">
+            <div className="invisible xl:visible fixed top-0 bottom-0 left-0 right-0 z-50 pointer-events-none">
                 <motion.div
                     className="w-[64px] h-[64px] rounded-full border border-secondary-color invert flex justify-center items-center"
                     ref={ref}
