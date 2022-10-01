@@ -21,7 +21,7 @@ const projectData: Project[] = [
 
         techStack: "REACT.JS, REDUX, TYPESCRIPT, SCSS, NODE.JS, EXPRESS.JS, TWITTER API",
         imageArray: ["dashboard_screenshot_1.png", "dashboard_screenshot_2.png", "dashboard_screenshot_1.png"],
-        githubUrl: "https://github.com/ColeInc/twitter-dashboard-frontend",
+        githubUrl: "https://github.com/ColeInc/mosa-twitter-dashboard-frontend",
     },
     {
         mainHeading: "Beludia",
