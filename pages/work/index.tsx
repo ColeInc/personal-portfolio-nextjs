@@ -24,6 +24,21 @@ const projectData: Project[] = [
         githubUrl: "https://github.com/ColeInc/mosa-twitter-dashboard-frontend",
     },
     {
+        mainHeading: "Nardium",
+        subHeading: "Chrome Extension",
+        description: `A handy Google Chrome Extension which helps you navigate your Google Docs document with ease!
+
+        I was getting frustrated with the look and functionality of the default heading outline tool in Google Docs, so I decided to make one myself. 
+        It provides you with an extra navigation panel which shows alongside your google docs, allowing you to navigate around easier.
+
+        It uses the Google Docs API to fetch a list of your document's headings, and displays them in an easy to use, and customizable UI. Allowing users to alter which headings are shown, zoom in out, etc.
+        `,
+
+        techStack: "REACT.JS, CHROME EXTENSION, OAUTH, GOOGLE DOCS API",
+        imageArray: ["nardium_screenshot_v4.png"],
+        githubUrl: "https://github.com/ColeInc/nardium-google-docs-outliner",
+    },
+    {
         mainHeading: "Beludia",
         subHeading: "Chrome Extension",
         description: `A small, but very handy chrome extension I built which allows users to save all their currently open chrome tabs with a single click, allowing them to quickly re-open their tabs back up exactly where they left off.
